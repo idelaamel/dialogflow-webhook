@@ -50,12 +50,16 @@ app.post('/webhook', async (req, res) => {
 
     // Format response with structured data
     const attractionList = attractions.map((attraction) => ({
-      name: attraction.name,
-      city: attraction.cityName,
-      description: attraction.description || 'No description available',
-      // Add any other relevant fields from your attraction data
-      id: attraction.id,
-      location: attraction.location || null,
+        id_Location: attraction.id,
+        name: attraction.name,
+        description: attraction.description || 'No description available',
+        imageUrls: attraction.imageUrls || [],
+        entryFee: attraction.entryFee || 0,
+        guideToursAvailable: attraction.guideToursAvailable || false,
+        latitude: attraction.latitude || 0,
+        longitude: attraction.longitude || 0,
+        cityName: attraction.cityName || 'Unknown',
+        countryName: attraction.countryName || 'Unknown',
     }));
 
     const textResponse = `Found ${attractions.length} attraction(s) in ${city}`;
