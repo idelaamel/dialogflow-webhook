@@ -54,7 +54,7 @@ app.post('/webhook', async (req, res) => {
         name: attraction.name,
         description: attraction.description || 'No description available',
         imageUrls: attraction.imageUrls || [],
-        entryFee: attraction.entryFee || 0,
+        entryFee: attraction.entryFre || 0,
         guideToursAvailable: attraction.guideToursAvailable || false,
         latitude: attraction.latitude || 0,
         longitude: attraction.longitude || 0,
