@@ -137,10 +137,10 @@ app.post('/webhook', async (req, res) => {
 
     // Map the attraction types from Dialogflow to your API endpoints
     const attractionEndpoints = {
-      'Natural': `${baseUrl}/public/NaturalAttractions`,
-      'Historical': `${baseUrl}/public/HistoricalAttractions`,
-      'Cultural': `${baseUrl}/public/CulturalAttractions`,
-      'Artificial': `${baseUrl}/public/ArtificialAttractions`,
+      'Natural': `${baseUrl}/api/public/NaturalAttractions`,
+      'Historical': `${baseUrl}/api/public/HistoricalAttractions`,
+      'Cultural': `${baseUrl}/api/public/CulturalAttractions`,
+      'Artificial': `${baseUrl}/api/public/ArtificialAttractions`,
     };
 
     // If a valid attractionType is provided, use the specific endpoint.
