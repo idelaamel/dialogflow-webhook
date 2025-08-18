@@ -188,7 +188,7 @@ app.post('/webhook', async (req, res) => {
         countryName: attraction.countryName || 'Inconnu',
     }));
 
-    const textResponse = `J'ai trouvé ${attractions.length} attraction(s) à ${city}`;
+    const textResponse = `J'ai trouvé ${attractions.length} attraction(s) à ${city}, de type ${attractionType}.`;
 
     // --- 6. Respond to Dialogflow (same as before) ---
     res.json({
