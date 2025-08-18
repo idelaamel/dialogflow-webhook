@@ -121,7 +121,7 @@ app.post('/webhook', async (req, res) => {
     const city = parameters?.['geo-city'];
     // Extract the new attraction type parameter.
     // Make sure your Dialogflow entity/parameter is named 'AttractionType'.
-    const attractionType = parameters?.['AttractionType'];
+    const attractionType = parameters?.['typeAttraction'];
 
     // Check if a city was provided
     if (!city) {
